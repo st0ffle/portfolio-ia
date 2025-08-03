@@ -1,0 +1,244 @@
+/* =====================================
+   HERO SPLIT COMPONENT STYLES
+   ===================================== */
+
+.hero-split-container {
+  width: 100vw;
+  height: 100vh;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-split {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  cursor: none;
+  overflow: hidden;
+}
+
+/* =====================================
+   IMAGE BASE ET RÉVÉLATIONS
+   ===================================== */
+
+.base-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.reveal-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.5px);
+  padding: 40px;
+}
+
+.text-overlay.left {
+  left: 0;
+  justify-content: flex-start;
+}
+
+.text-overlay.right {
+  right: 0;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* =====================================
+   OVERLAY CONTENT
+   ===================================== */
+
+
+.content-wrapper {
+  color: #1e293b;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.text-overlay .title {
+  font-family: 'Proxima Nova', -apple-system, sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 0.9;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.text-overlay .description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 300px;
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1e293b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* =====================================
+   CONTENU CENTRAL
+   ===================================== */
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 4;
+  color: #1e293b;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.main-title {
+  font-family: 'Proxima Nova', -apple-system, sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  line-height: 0.8;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.03em;
+}
+
+.main-subtitle {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 300;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+}
+
+.separator-line {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  margin: 0 auto;
+}
+
+/* =====================================
+   LIGNE DE SÉPARATION DYNAMIQUE
+   ===================================== */
+
+.dynamic-separator {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.8) 80%,
+    transparent
+  );
+  z-index: 5;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 768px) {
+  .text-overlay {
+    padding: 30px;
+  }
+  
+  .text-overlay .description {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    padding: 20px;
+  }
+  
+  .text-overlay .description {
+    display: none; /* Cache la description sur très petits écrans */
+  }
+  
+  /* Désactive l'effet sur mobile, montre juste l'image de base */
+  .reveal-image,
+  .text-overlay {
+    display: none;
+  }
+  
+  /* Force l'affichage de l'image de base sur mobile */
+  .base-image {
+    display: block;
+  }
+}
+
+/* =====================================
+   ANIMATIONS SUPPLÉMENTAIRES
+   ===================================== */
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.hero-split:hover .dynamic-separator {
+  animation: pulse 2s infinite;
+}
+
+/* Cursor custom pour desktop */
+@media (min-width: 769px) {
+  .hero-split {
+    cursor: crosshair;
+  }
+}
+
+/* Effets de particules optionnels */
+.hero-split::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.3), transparent);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  opacity: 0.1;
+  z-index: 1;
+  pointer-events: none;
+}
