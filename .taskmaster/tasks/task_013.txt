@@ -1,0 +1,11 @@
+# Task ID: 13
+# Title: Développement du layout et navigation responsive
+# Status: pending
+# Dependencies: 12
+# Priority: high
+# Description: Créer la structure de navigation principale et le layout responsive mobile-first
+# Details:
+Développer Header avec navigation sticky et menu mobile hamburger responsive. Créer Footer avec liens essentiels. Implémenter navigation smooth scroll entre sections avec React Spring. Layout mobile-first avec breakpoints optimisés. Menu collapsible sur mobile avec animations fluides. Navigation avec indicateur de section active.
+
+# Test Strategy:
+Tester la navigation sur différentes tailles d'écran (mobile 375px, tablette 768px, desktop 1024px+) et vérifier le smooth scroll

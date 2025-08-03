@@ -1,0 +1,11 @@
+# Task ID: 17
+# Title: Configuration et intégration Claude API
+# Status: pending
+# Dependencies: 16
+# Priority: high
+# Description: Mettre en place l'intégration Claude API avec Haiku 3.5 et Sonnet 4, gestion des coûts
+# Details:
+Configuration Claude API avec clés sécurisées dans variables d'environnement. Implémentation logique de routing : Haiku 3.5 pour requêtes standard, Sonnet 4 pour requêtes complexes. Middleware de gestion des coûts avec compteurs et limites. Route API Next.js pour proxy sécurisé. Gestion des erreurs et fallbacks. Structure prompt engineering pour personnalité Mathieu.
+
+# Test Strategy:
+Tester les appels API, la bascule entre modèles selon la complexité, le respect des limites de coût et la gestion des erreurs

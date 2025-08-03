@@ -1,0 +1,11 @@
+# Task ID: 12
+# Title: Installation et configuration Shadcn/ui avec React Spring
+# Status: pending
+# Dependencies: 11
+# Priority: high
+# Description: Mettre en place le design system avec Shadcn/ui et React Spring pour les animations
+# Details:
+Installer et configurer Shadcn/ui avec TailwindCSS v4. Installer React Spring (remplaçant Framer Motion pour 30% de gain de performance). Créer components.json pour Shadcn. Installer composants de base : Button, Card, Input, Textarea. Créer un thème personnalisé avec couleurs modernes et typography system. Setup des tokens design dans tailwind.config.js.
+
+# Test Strategy:
+Créer une page de test avec tous les composants Shadcn installés et une animation React Spring simple pour valider l'intégration

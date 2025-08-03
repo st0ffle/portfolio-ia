@@ -1,0 +1,11 @@
+# Task ID: 19
+# Title: Implémentation du slider interactif Dev ↔ IA dans la hero section
+# Status: pending
+# Dependencies: 18
+# Priority: medium
+# Description: Ajouter l'animation interactive du slider Dev/IA avec React Spring
+# Details:
+Transformer la hero section statique en slider interactif avec React Spring. Animation fluide entre état Dev et état IA avec morphing des images et textes. Contrôles tactiles (swipe mobile) et clavier. Auto-play optionnel avec pause au hover. Optimisation performance pour 60fps sur mobile. Indicateurs visuels de l'état actuel.
+
+# Test Strategy:
+Tester la fluidité des animations sur différents devices, les interactions tactiles, la performance 60fps et l'accessibilité

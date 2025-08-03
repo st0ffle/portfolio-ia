@@ -1,0 +1,11 @@
+# Task ID: 15
+# Title: Développement des sections contenu statique
+# Status: pending
+# Dependencies: 14
+# Priority: medium
+# Description: Créer les sections À propos, Expériences, Compétences avec contenu structuré
+# Details:
+Section À propos : parcours, passion dev + pédagogie avec photo et texte engageant. Section Expériences : TechPath, Matha.io, formations avec timeline interactive. Section Compétences : focus Dev + IA, technologies avec skill bars ou grille moderne. Utiliser Shadcn/ui components pour cohérence. Animations d'entrée subtiles avec React Spring.
+
+# Test Strategy:
+Vérifier la lisibilité du contenu, la cohérence du design et les animations d'entrée lors du scroll sur mobile et desktop

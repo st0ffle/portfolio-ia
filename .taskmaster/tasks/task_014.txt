@@ -1,0 +1,11 @@
+# Task ID: 14
+# Title: Création de la hero section statique avec structure Dev/IA
+# Status: pending
+# Dependencies: 13
+# Priority: high
+# Description: Développer la hero section avec layout pour le slider Dev ↔ IA (sans animation interactive d'abord)
+# Details:
+Créer composant HeroSection avec deux côtés : gauche (Mathieu développeur) et droite (Mathieu IA). Layout responsive avec images optimisées Next.js Image. Structure pour le futur slider interactif. Typography accrocheuse avec gradient text. CTA buttons vers contact et projets. Optimisation Core Web Vitals avec lazy loading approprié.
+
+# Test Strategy:
+Valider le responsive design sur toutes tailles d'écran et mesurer les performances avec Lighthouse (objectif LCP <2.5s)

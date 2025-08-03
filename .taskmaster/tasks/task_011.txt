@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Configuration et setup projet Next.js 15 avec stack optimisé 2025
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Initialiser le projet avec React 19, Next.js 15 App Router, TypeScript 5.7, TailwindCSS v4 et pnpm
+# Details:
+Créer un nouveau projet Next.js 15 avec Turbopack activé. Installer React 19, TypeScript 5.7 en mode strict, TailwindCSS v4 (CSS-first). Configurer pnpm comme package manager. Initialiser Git et setup de base ESLint/Prettier. Créer structure dossiers : /components, /lib, /types, /styles. Configuration next.config.js avec optimisations bundle pour target <200KB.
+
+# Test Strategy:
+Vérifier que le projet démarre correctement avec npm run dev, que TypeScript compile sans erreurs, et que TailwindCSS v4 fonctionne avec classes de base

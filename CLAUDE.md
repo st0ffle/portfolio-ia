@@ -91,9 +91,10 @@ Si l'utilisateur dit ces mots → utiliser cet agent :
 
 ## Objectifs techniques
 - Portfolio responsive mobile-first avec hero section interactive Dev ↔ IA
-- IA chatbot personnalisée connaissant Mathieu (pro + perso)
-- Stack React/Next.js/TypeScript + Shadcn/ui
-- Performances optimales (bundle <200KB, Lighthouse >90)
+- IA chatbot personnalisée connaissant Mathieu (intégration directe Claude API)
+- Stack optimisé : React 19 + Next.js 15 + TailwindCSS v4 + React Spring
+- Performances optimales (bundle <200KB, Lighthouse >90, Core Web Vitals)
+- Coûts IA maîtrisés avec Claude Haiku 3.5 + optimisations cache
 
 ## RÈGLES CRITIQUES - À RESPECTER ABSOLUMENT
 
@@ -122,21 +123,29 @@ Utiliser le `taskmaster-orchestrator` pour évaluer où nous en sommes dans le r
 6. ✅ Toujours montrer le rendu visuel avant de continuer
 ```
 
-### **📦 STACK TECHNIQUE STANDARD**
+### **📦 STACK TECHNIQUE OPTIMISÉ 2025**
 ```bash
 # Package Manager
 pnpm
 
 # Core Stack
-React: latest
-Next.js: latest
-TypeScript: latest
+React: 19 (stable)
+Next.js: 15 (App Router + Turbopack)
+TypeScript: 5.7
 Node.js: LTS latest
 
-# UI & Testing
-Shadcn/ui: latest
-Vite: latest
-Playwright: latest
+# UI & Animations
+Shadcn/ui: latest avec TailwindCSS v4
+React Spring: remplace Framer Motion (30% plus léger)
+TailwindCSS: v4 (CSS-first, 3-10x plus rapide)
+
+# IA & Communication
+Claude API: Haiku 3.5 (cost-optimized) + Sonnet 4 (premium)
+Resend: remplace EmailJS (plus professionnel)
+
+# Testing & Deploy
+Playwright: E2E testing
+Vercel: déploiement optimisé Next.js
 ```
 
 ### **🔧 MCP TOOLS RECOMMANDÉS**

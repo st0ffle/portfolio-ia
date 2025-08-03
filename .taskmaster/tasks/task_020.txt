@@ -1,0 +1,11 @@
+# Task ID: 20
+# Title: Optimisations performance et Core Web Vitals
+# Status: pending
+# Dependencies: 19
+# Priority: medium
+# Description: Optimiser les performances globales, bundle size et métriques Core Web Vitals
+# Details:
+Analyse bundle avec Next.js Bundle Analyzer, tree-shaking optimal. Optimisation images avec Next.js Image et formats modernes (WebP/AVIF). Lazy loading composants non-critiques. Préchargement stratégique des ressources. Cache strategy avec Vercel KV pour réponses IA. Monitoring Core Web Vitals en continu. Target : bundle <200KB, Lighthouse >90.
+
+# Test Strategy:
+Mesurer avec Lighthouse CI, tester sur connexions lentes (3G), valider Core Web Vitals et taille de bundle final

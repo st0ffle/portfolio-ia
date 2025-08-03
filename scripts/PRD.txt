@@ -46,13 +46,13 @@ Portfolio personnel innovant pour Mathieu Gonon, CEO de TechPath (agence web). L
 <PRD>
 # Technical Architecture  
 
-## System Components
-- **Frontend** : React + Next.js + TypeScript
-- **UI Library** : Shadcn/ui pour composants
-- **Styling** : TailwindCSS
-- **Animations** : Framer Motion
-- **IA Integration** : API externe (Claude/OpenAI - à définir)
-- **CMS** : Contenu statique + données IA dynamiques
+## System Components - Stack Optimisé 2025
+- **Frontend** : React 19 + Next.js 15 (App Router + Turbopack)
+- **UI Library** : Shadcn/ui + TailwindCSS v4 (CSS-first, 3-10x plus rapide)
+- **Animations** : React Spring (30% plus léger que Framer Motion)
+- **IA Integration** : Claude API (Haiku 3.5 cost-optimized + Sonnet 4 premium)
+- **Communication** : Resend (remplacement EmailJS)
+- **Performance** : Web Workers, cache intelligent multi-niveaux
 
 ## Data Models
 ```
@@ -73,10 +73,11 @@ ChatbotKnowledge {
 ```
 
 ## APIs and Integrations
-- API IA externe pour chatbot
-- Formulaire contact (EmailJS ou API email)
-- Analytics (Google Analytics 4)
-- Potentiel : intégration portfolio GitHub (futur)
+- **Claude API** : Haiku 3.5 + Sonnet 4 avec gestion coûts intelligente
+- **Resend API** : Email professionnel avec templates
+- **Analytics** : Google Analytics 4 + Core Web Vitals monitoring
+- **Cache Strategy** : Redis/Vercel KV pour réponses IA fréquentes
+- **Performance** : Lighthouse CI + Real User Monitoring
 
 ## Infrastructure Requirements
 - Hébergement moderne (Vercel/Netlify priorité)
@@ -87,24 +88,27 @@ ChatbotKnowledge {
 # Development Roadmap  
 
 ## Phase 1 : MVP Portfolio Statique
-- Setup projet Next.js + TypeScript + Shadcn/ui
-- Hero section avec slider Dev/IA (sans IA fonctionnelle)
+- Setup projet Next.js 15 + TypeScript 5.7 + TailwindCSS v4
+- Configuration Shadcn/ui + React Spring pour animations
+- Hero section avec slider Dev/IA (statique d'abord)
 - Sections : À propos, Expériences, Compétences
-- Design responsive mobile-first
-- Déploiement de base
+- Design responsive mobile-first + optimisations performance
+- Déploiement Vercel avec monitoring
 
-## Phase 2 : IA Chatbot
-- Collecte et structuration données personnelles/pro
-- Intégration API IA + interface chat
-- Entraînement/fine-tuning réponses
-- Tests utilisateurs et ajustements
+## Phase 2 : IA Chatbot Intégration Directe
+- Configuration Claude API (Haiku 3.5 + Sonnet 4) avec gestion coûts
+- Structuration données personnelles/pro pour prompt engineering
+- Interface chat avec streaming responses + Web Workers
+- Cache intelligent + fallback graceful
+- Tests conversationnels et ajustements personnalité
 
-## Phase 3 : Optimisations & Animations
-- Animations avancées hero section
-- Case studies détaillées avec visuels
+## Phase 3 : Optimisations & Polish
+- Animations avancées hero section avec React Spring
+- Case studies détaillées avec visuels optimisés
 - Section formation/pédagogie enrichie
-- Optimisations performances
-- SEO complet
+- Core Web Vitals optimization + Lighthouse CI
+- SEO complet + schema markup
+- A/B testing IA responses
 
 ## Phase 4 : Features Avancées (Optionnel)
 - Projets démo open source
@@ -150,12 +154,14 @@ ChatbotKnowledge {
 
 # Appendix  
 
-## Technical Specifications
-- React 18+ avec App Router Next.js
-- TypeScript strict mode
-- Bundle < 200KB optimisé mobile
+## Technical Specifications - Optimisées 2025
+- React 19 + Next.js 15 (App Router + Turbopack stable)
+- TypeScript 5.7 strict mode
+- TailwindCSS v4 (CSS-first, build 3-10x plus rapide)
+- Bundle < 200KB optimisé mobile (145-182KB estimé)
+- Core Web Vitals : LCP <2.5s, FID <100ms, CLS <0.1
 - Lighthouse Score > 90 toutes métriques
-- Compatible dernières versions navigateurs
+- Support navigateurs modernes (Safari 16.4+, Chrome 111+)
 
 ## Content Requirements
 - Collecte détaillée expériences Mathieu
@@ -163,11 +169,12 @@ ChatbotKnowledge {
 - Rédaction contenu optimisé conversion
 - Données entraînement IA (Q&A + personnalité)
 
-## Success Metrics
-- Temps session > 2min
-- Taux engagement IA chatbot > 30%
-- Conversions contact > 5%
-- Feedback qualitatif positif
+## Success Metrics - Optimisées
+- **Performance** : Core Web Vitals > 75e percentile, Lighthouse >90
+- **Engagement** : Temps session > 2min, taux IA chatbot > 30%
+- **Business** : Conversions contact > 5%, coût IA <10€/mois
+- **Technique** : Bundle <200KB, TTI <3s mobile 4G
+- **Qualité** : Feedback qualitatif positif, 0 erreur JS critique
 
 ## Future Considerations
 - Évolutivité contenu (nouveau projets)

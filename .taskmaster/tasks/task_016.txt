@@ -1,0 +1,11 @@
+# Task ID: 16
+# Title: Intégration système de contact avec Resend API
+# Status: pending
+# Dependencies: 15
+# Priority: medium
+# Description: Implémenter le formulaire de contact professionnel avec Resend et validation
+# Details:
+Créer formulaire de contact avec validation côté client (React Hook Form + Zod). Intégrer Resend API pour envoi emails professionnels avec templates HTML. Route API Next.js pour traitement sécurisé. Gestion d'erreurs et états loading. Protection anti-spam basique. Templates email pour Mathieu et confirmation utilisateur.
+
+# Test Strategy:
+Tester l'envoi d'emails via Resend, validation des champs obligatoires, gestion des erreurs réseau et expérience utilisateur complète
