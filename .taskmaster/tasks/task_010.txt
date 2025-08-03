@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Optimisations performances et déploiement
+# Status: pending
+# Dependencies: 7, 9
+# Priority: medium
+# Description: Optimiser les performances, SEO et déployer sur Vercel avec monitoring
+# Details:
+Optimiser les images avec next/image et formats modernes (WebP/AVIF). Implémenter le code splitting et lazy loading des composants lourds. Configurer les meta tags SEO, Open Graph et JSON-LD. Optimiser les Core Web Vitals pour score Lighthouse > 90. Configurer le déploiement Vercel avec variables d'environnement. Ajouter Google Analytics 4 et monitoring basique. Implémenter la compression gzip/brotli.
+
+# Test Strategy:
+Auditer avec Lighthouse sur mobile et desktop, tester les performances sur connexions lentes, valider le SEO avec les outils Google, vérifier le déploiement en production, tester l'analytics et le monitoring en conditions réelles.

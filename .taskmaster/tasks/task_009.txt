@@ -1,0 +1,43 @@
+# Task ID: 9
+# Title: Intégration API IA et logique conversationnelle
+# Status: pending
+# Dependencies: 8
+# Priority: high
+# Description: Connecter le chatbot à l'API IA externe et implémenter la logique de conversation
+# Details:
+Choisir et configurer l'API IA (Claude Anthropic recommandé). Créer les API routes Next.js pour proxy sécurisé (/api/chat). Implémenter la logique de prompt engineering avec les données Mathieu structurées. Gérer les contextes de conversation et la mémoire des échanges. Ajouter la gestion d'erreurs robuste et les fallbacks. Implémenter un système de modération de base pour éviter les questions inappropriées.
+
+# Test Strategy:
+Tester les réponses du chatbot avec des questions types clients, valider la cohérence de la personnalité Mathieu, vérifier la sécurité API et les rate limits, tester les cas d'erreur réseau et les timeouts.
+
+# Subtasks:
+## 1. Configuration et connexion API IA externe [pending]
+### Dependencies: None
+### Description: Sélectionner, configurer et tester la connexion à l'API Claude Anthropic pour le chatbot
+### Details:
+Créer un compte Anthropic, obtenir les clés API et les stocker dans les variables d'environnement (.env.local). Installer le SDK Anthropic et créer un service client IA dans lib/ai-client.ts. Configurer les paramètres de base : modèle, température, max_tokens. Créer une fonction de test pour valider la connexion et les réponses basiques.
+
+## 2. Création des API routes Next.js sécurisées [pending]
+### Dependencies: 9.1
+### Description: Développer l'endpoint /api/chat avec proxy sécurisé et gestion des rate limits
+### Details:
+Créer app/api/chat/route.ts avec méthode POST pour recevoir les messages utilisateur. Implémenter la validation des données d'entrée avec Zod. Ajouter un système de rate limiting basique avec Map/cache temporaire. Configurer les headers CORS appropriés. Masquer les clés API côté serveur et proxy les requêtes vers Claude. Implémenter la gestion d'erreurs avec codes HTTP appropriés.
+
+## 3. Implémentation du prompt engineering et personnalité Mathieu [pending]
+### Dependencies: 9.2
+### Description: Créer le système de prompts structurés intégrant les données personnelles et professionnelles de Mathieu
+### Details:
+Créer un fichier lib/prompts.ts avec le prompt système définissant la personnalité de Mathieu (parcours TechPath, expertise dev + IA, pédagogie). Structurer les données personnelles et professionnelles en JSON (expériences, compétences, projets). Implémenter un système de templates de prompts selon le contexte (questions techniques, commercial, personnel). Créer des exemples de conversations types pour l'entraînement du comportement.
+
+## 4. Gestion du contexte conversationnel et mémoire [pending]
+### Dependencies: 9.3
+### Description: Implémenter le système de maintien du contexte et de la mémoire des échanges précédents
+### Details:
+Créer un système de gestion de session côté client avec sessionStorage pour maintenir l'historique des messages. Implémenter une logique de truncation intelligente du contexte pour respecter les limites de tokens. Créer des hooks React (useConversation) pour gérer l'état des messages. Implémenter la persistance optionnelle des conversations importantes. Gérer la continuité contextuelle pour des conversations cohérentes.
+
+## 5. Système de gestion d'erreurs et modération [pending]
+### Dependencies: 9.4
+### Description: Implémenter la gestion robuste des erreurs, fallbacks et modération de contenu de base
+### Details:
+Créer un système de fallback avec messages prédéfinis en cas d'erreur API. Implémenter une liste de mots-clés inappropriés pour filtrage basique. Créer des messages d'erreur user-friendly pour différents cas (quota dépassé, service indisponible, etc.). Ajouter un système de retry automatique avec backoff exponentiel. Implémenter des logs côté serveur pour monitoring. Créer un indicateur de statut du service pour l'utilisateur.
+

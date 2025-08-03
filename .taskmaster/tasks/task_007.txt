@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: Animation interactive de la hero section
+# Status: pending
+# Dependencies: 3, 5
+# Priority: high
+# Description: Implémenter le slider interactif Dev ↔ IA avec animations fluides
+# Details:
+Créer le composant HeroSlider avec état géré (Dev/IA). Implémenter les animations de transition avec Framer Motion : morphing des images, changement de texte, transformation des badges de compétences. Ajouter les contrôles utilisateur (boutons, swipe sur mobile). Optimiser les performances avec lazy loading et useCallback. Gérer les états intermédiaires d'animation pour éviter les conflits. Ajouter un auto-play optionnel avec pause au hover.
+
+# Test Strategy:
+Tester les animations sur devices low-end, valider la fluidité à 60fps, vérifier les interactions tactiles sur mobile, s'assurer que les animations respectent prefers-reduced-motion, tester l'auto-play et les contrôles utilisateur.

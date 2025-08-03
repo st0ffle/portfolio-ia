@@ -1,0 +1,43 @@
+# Task ID: 3
+# Title: Développement de la hero section statique
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Créer la structure de base de la hero section avec layout Dev/IA sans interactions
+# Details:
+Implémenter la hero section avec deux colonnes (Dev/IA) inspirée d'adhamdannaway.com. Créer les composants : HeroSection, ProfileCard, SkillsBadge. Intégrer les photos (réelle et version robot à préparer). Ajouter le contenu texte avec présentation Mathieu développeur vs IA. Optimiser pour le responsive avec stack vertical sur mobile. Préparer la structure pour l'animation future (slider).
+
+# Test Strategy:
+Vérifier l'affichage responsive sur tous les devices, tester le contraste et la lisibilité, valider l'optimisation des images avec next/image, s'assurer que la structure HTML est sémantique et accessible.
+
+# Subtasks:
+## 1. Création des composants de base de la hero section [pending]
+### Dependencies: None
+### Description: Développer les composants React fondamentaux pour la hero section : HeroSection (conteneur principal), ProfileCard (carte de profil) et SkillsBadge (badges de compétences)
+### Details:
+Créer src/components/HeroSection.tsx comme composant principal avec une structure en deux colonnes. Développer ProfileCard.tsx pour afficher photo et informations de base. Implémenter SkillsBadge.tsx comme composant réutilisable pour les badges de compétences. Utiliser TypeScript avec des interfaces strictes pour les props. Intégrer les composants Shadcn/ui (Card, Badge) comme base.
+
+## 2. Intégration et optimisation des images [pending]
+### Dependencies: 3.1
+### Description: Intégrer les photos de Mathieu (réelle et version robot) avec optimisation next/image
+### Details:
+Ajouter les images dans public/images/ avec des formats optimisés (WebP/AVIF). Utiliser next/image avec priority pour la hero section, définir les tailles appropriées (responsive). Créer des placeholders avec blur data URLs. Préparer l'image robot de Mathieu (peut être temporairement un placeholder en attendant la création). Optimiser les tailles pour différents breakpoints.
+
+## 3. Implémentation du contenu textuel et des données [pending]
+### Dependencies: 3.1
+### Description: Ajouter le contenu texte complet avec présentation Mathieu développeur vs IA, créer la structure de données pour les compétences
+### Details:
+Créer src/data/heroContent.ts avec les textes pour les deux modes (Dev/IA). Définir les compétences techniques de Mathieu avec catégories (Frontend, Backend, DevOps). Ajouter les descriptions contrastées : Mathieu développeur (expérience, projets) vs IA assistant (capabilities, innovation). Structurer les données pour faciliter l'animation future. Utiliser des types TypeScript pour la cohérence.
+
+## 4. Développement du layout responsive [pending]
+### Dependencies: 3.1, 3.2, 3.3
+### Description: Implémenter le layout responsive avec colonnes desktop et stack vertical mobile
+### Details:
+Utiliser CSS Grid ou Flexbox pour le layout deux colonnes sur desktop. Implémenter la stack verticale sur mobile avec Tailwind breakpoints. Optimiser l'espacement et la hiérarchie visuelle pour mobile. Gérer les transitions entre breakpoints de manière fluide. S'assurer que l'ordre d'affichage mobile suit la logique UX (photo en premier, puis contenu).
+
+## 5. Préparation de la structure pour l'animation future [pending]
+### Dependencies: 3.4
+### Description: Structurer le code pour faciliter l'implémentation future du slider interactif Dev ↔ IA
+### Details:
+Créer une architecture avec état géré pour basculer entre modes Dev/IA. Définir les interfaces TypeScript pour les données d'animation. Structurer les composants pour accepter des props de mode (currentMode: 'dev' | 'ai'). Préparer les data attributes et classes CSS pour Framer Motion. Organiser le code pour minimiser les refactorings lors de l'ajout des animations.
+

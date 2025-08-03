@@ -1,0 +1,177 @@
+<context>
+# Overview  
+Portfolio personnel innovant pour Mathieu Gonon, CEO de TechPath (agence web). L'objectif principal est d'attirer de nouveaux clients pour l'agence, tout en restant ouvert aux opportunités d'emploi. Le portfolio se différencie par l'intégration d'une IA chatbot personnalisée et une hero section interactive unique.
+
+# Core Features  
+
+## Hero Section Interactive
+- Slider interactif Dev ↔ IA (inspiré d'adhamdannaway.com)
+- Côté gauche : Mathieu développeur (photo réelle)
+- Côté droite : Mathieu IA (version robotisée)
+- Animation fluide entre les deux identités
+
+## IA Chatbot Personnalisée
+- Chatbot entraîné avec données personnelles et professionnelles de Mathieu
+- Connaissances : expériences, méthodologies, tarifs, opinions tech, anecdotes perso
+- Capable de répondre aux questions clients comme si c'était Mathieu
+- Interface chat intégrée ou section dédiée
+
+## Sections Portfolio Classiques
+- À propos : parcours, passion dev + pédagogie
+- Expériences : TechPath, Matha.io, formations, projets marquants
+- Compétences techniques : Focus Dev + IA (secondaire : formation/entrepreneuriat)
+- Case studies : projets anonymisés avec détails techniques
+- Section formation : expérience pédagogique (entrepreneurs, prisonniers, développeurs)
+
+# User Experience  
+
+## User Personas
+- **Clients potentiels TechPath** : entrepreneurs/PME cherchant dev web + conseil
+- **Recruteurs tech** : recherche dev fullstack passionné d'IA
+- **Professionnels du réseau** : partenaires, collaborateurs potentiels
+
+## Key User Flows
+1. **Découverte** : Hero section → scroll sections → interaction IA
+2. **Evaluation technique** : compétences → case studies → chat IA pour questions
+3. **Contact business** : IA pour infos préliminaires → contact direct
+
+## UI/UX Considerations
+- Design moderne/épuré (inspirations : toukoum.fr, pronexus.in, aakashrajbanshi.com.np)
+- Mobile-first, parfaitement responsive
+- Animations subtiles et performantes
+- Navigation intuitive
+- Accessibilité optimisée
+</context>
+
+<PRD>
+# Technical Architecture  
+
+## System Components
+- **Frontend** : React + Next.js + TypeScript
+- **UI Library** : Shadcn/ui pour composants
+- **Styling** : TailwindCSS
+- **Animations** : Framer Motion
+- **IA Integration** : API externe (Claude/OpenAI - à définir)
+- **CMS** : Contenu statique + données IA dynamiques
+
+## Data Models
+```
+Profile {
+  personalInfo: object
+  experiences: array
+  skills: array
+  projects: array
+  trainings: array
+}
+
+ChatbotKnowledge {
+  qaPairs: array
+  personality: object
+  businessInfo: object
+  personalAnecdotes: array
+}
+```
+
+## APIs and Integrations
+- API IA externe pour chatbot
+- Formulaire contact (EmailJS ou API email)
+- Analytics (Google Analytics 4)
+- Potentiel : intégration portfolio GitHub (futur)
+
+## Infrastructure Requirements
+- Hébergement moderne (Vercel/Netlify priorité)
+- CDN pour performances
+- SSL/HTTPS obligatoire
+- Monitoring basique
+
+# Development Roadmap  
+
+## Phase 1 : MVP Portfolio Statique
+- Setup projet Next.js + TypeScript + Shadcn/ui
+- Hero section avec slider Dev/IA (sans IA fonctionnelle)
+- Sections : À propos, Expériences, Compétences
+- Design responsive mobile-first
+- Déploiement de base
+
+## Phase 2 : IA Chatbot
+- Collecte et structuration données personnelles/pro
+- Intégration API IA + interface chat
+- Entraînement/fine-tuning réponses
+- Tests utilisateurs et ajustements
+
+## Phase 3 : Optimisations & Animations
+- Animations avancées hero section
+- Case studies détaillées avec visuels
+- Section formation/pédagogie enrichie
+- Optimisations performances
+- SEO complet
+
+## Phase 4 : Features Avancées (Optionnel)
+- Projets démo open source
+- Intégration metrics/analytics avancées
+- A/B testing différentes versions
+- Multilingual (EN/FR)
+
+# Logical Dependency Chain
+
+## Fondations (Priorité 1)
+1. **Setup technique** : Projet + stack + déploiement de base
+2. **Design system** : Couleurs, typographie, composants de base
+3. **Hero section statique** : Layout + responsive sans interactions
+
+## Interface utilisable (Priorité 2)
+4. **Sections contenu** : À propos, expériences, compétences (contenu statique)
+5. **Navigation** : Menu + scroll fluide entre sections
+6. **Contact** : Formulaire de base fonctionnel
+
+## Différenciation (Priorité 3)
+7. **Hero interactif** : Animation slider Dev/IA
+8. **IA chatbot** : Interface + intégration API + données
+9. **Polish** : Animations, transitions, optimisations
+
+# Risks and Mitigations  
+
+## Technical Challenges
+- **Risque** : Complexité intégration IA
+- **Mitigation** : Commencer par MVP sans IA, API simple d'abord
+
+- **Risque** : Performances animations mobile
+- **Mitigation** : Progressive enhancement, tests devices réels
+
+## MVP Definition
+- **Cœur MVP** : Portfolio responsive avec hero section et contenu essentiel
+- **Différenciation MVP** : Animation hero Dev/IA même sans chatbot fonctionnel
+- **Critère succès** : Site professionnel qui convertit visiteurs en prospects
+
+## Resource Constraints
+- **Temps** : Développement rapide souhaité
+- **Budget** : Coûts API IA à surveiller
+- **Maintenance** : Solution autonome préférée
+
+# Appendix  
+
+## Technical Specifications
+- React 18+ avec App Router Next.js
+- TypeScript strict mode
+- Bundle < 200KB optimisé mobile
+- Lighthouse Score > 90 toutes métriques
+- Compatible dernières versions navigateurs
+
+## Content Requirements
+- Collecte détaillée expériences Mathieu
+- Photos professionnelles + version "robot"
+- Rédaction contenu optimisé conversion
+- Données entraînement IA (Q&A + personnalité)
+
+## Success Metrics
+- Temps session > 2min
+- Taux engagement IA chatbot > 30%
+- Conversions contact > 5%
+- Feedback qualitatif positif
+
+## Future Considerations
+- Évolutivité contenu (nouveau projets)
+- Internationalisation possible
+- Intégration CRM pour leads
+- Blog technique (phase ultérieure)
+</PRD>

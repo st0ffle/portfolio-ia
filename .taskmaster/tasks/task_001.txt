@@ -1,0 +1,43 @@
+# Task ID: 1
+# Title: Configuration initiale du projet Next.js
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Créer la structure de base du projet avec Next.js, TypeScript, TailwindCSS et Shadcn/ui
+# Details:
+Initialiser un nouveau projet Next.js avec App Router, configurer TypeScript en mode strict, installer et configurer TailwindCSS, installer Shadcn/ui et initialiser les composants de base. Créer la structure de dossiers : app/, components/, lib/, types/. Configurer next.config.js pour les optimisations d'images et de performance. Installer les dépendances essentielles : framer-motion, lucide-react.
+
+# Test Strategy:
+Vérifier que le serveur de développement démarre sans erreur, que TypeScript compile correctement, que TailwindCSS fonctionne avec un composant test, et que Shadcn/ui est opérationnel avec un composant bouton basique.
+
+# Subtasks:
+## 1. Initialisation du projet Next.js avec App Router [pending]
+### Dependencies: None
+### Description: Créer un nouveau projet Next.js avec App Router et configuration TypeScript
+### Details:
+Exécuter `npx create-next-app@latest portfolio-ia --typescript --tailwind --eslint --app --src-dir --import-alias '@/*'`. Configurer TypeScript en mode strict dans tsconfig.json. Nettoyer les fichiers exemple générés et créer la structure de base dans src/app/.
+
+## 2. Configuration et optimisation TailwindCSS [pending]
+### Dependencies: 1.1
+### Description: Configurer TailwindCSS avec palette personnalisée et optimisations
+### Details:
+Modifier tailwind.config.js pour ajouter la palette de couleurs inspirée des références. Configurer les breakpoints responsive, les animations personnalisées et les variables CSS. Créer le fichier globals.css avec les styles de base et les variables custom.
+
+## 3. Installation et configuration Shadcn/ui [pending]
+### Dependencies: 1.2
+### Description: Installer Shadcn/ui et initialiser les composants de base
+### Details:
+Exécuter `npx shadcn-ui@latest init` avec configuration adaptée au projet. Installer les composants essentiels : Button, Card, Input, Avatar. Configurer le fichier components.json et créer l'alias d'import pour les composants UI.
+
+## 4. Création de la structure de dossiers et fichiers de base [pending]
+### Dependencies: 1.3
+### Description: Organiser l'architecture du projet avec dossiers types, lib et components
+### Details:
+Créer les dossiers : src/components/ui, src/components/sections, src/lib, src/types, src/hooks, src/data. Ajouter les fichiers : lib/utils.ts (avec clsx/tailwind-merge), types/index.ts, et la configuration des chemins absolus. Créer les fichiers d'index pour les exports.
+
+## 5. Configuration avancée et dépendances essentielles [pending]
+### Dependencies: 1.4
+### Description: Finaliser next.config.js et installer framer-motion, lucide-react
+### Details:
+Configurer next.config.js avec optimisations d'images, compression, et bundler optimizations. Installer framer-motion pour les animations et lucide-react pour les icônes. Ajouter les configurations ESLint et Prettier adaptées au projet. Créer un composant Layout de base.
+

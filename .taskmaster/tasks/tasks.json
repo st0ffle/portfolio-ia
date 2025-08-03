@@ -1,0 +1,362 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Configuration initiale du projet Next.js",
+        "description": "Créer la structure de base du projet avec Next.js, TypeScript, TailwindCSS et Shadcn/ui",
+        "details": "Initialiser un nouveau projet Next.js avec App Router, configurer TypeScript en mode strict, installer et configurer TailwindCSS, installer Shadcn/ui et initialiser les composants de base. Créer la structure de dossiers : app/, components/, lib/, types/. Configurer next.config.js pour les optimisations d'images et de performance. Installer les dépendances essentielles : framer-motion, lucide-react.",
+        "testStrategy": "Vérifier que le serveur de développement démarre sans erreur, que TypeScript compile correctement, que TailwindCSS fonctionne avec un composant test, et que Shadcn/ui est opérationnel avec un composant bouton basique.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Initialisation du projet Next.js avec App Router",
+            "description": "Créer un nouveau projet Next.js avec App Router et configuration TypeScript",
+            "dependencies": [],
+            "details": "Exécuter `npx create-next-app@latest portfolio-ia --typescript --tailwind --eslint --app --src-dir --import-alias '@/*'`. Configurer TypeScript en mode strict dans tsconfig.json. Nettoyer les fichiers exemple générés et créer la structure de base dans src/app/.",
+            "status": "pending",
+            "testStrategy": "Vérifier que `npm run dev` démarre sans erreur et que la page d'accueil s'affiche correctement"
+          },
+          {
+            "id": 2,
+            "title": "Configuration et optimisation TailwindCSS",
+            "description": "Configurer TailwindCSS avec palette personnalisée et optimisations",
+            "dependencies": [
+              "1.1"
+            ],
+            "details": "Modifier tailwind.config.js pour ajouter la palette de couleurs inspirée des références. Configurer les breakpoints responsive, les animations personnalisées et les variables CSS. Créer le fichier globals.css avec les styles de base et les variables custom.",
+            "status": "pending",
+            "testStrategy": "Créer un composant test utilisant les couleurs et classes personnalisées pour valider la configuration"
+          },
+          {
+            "id": 3,
+            "title": "Installation et configuration Shadcn/ui",
+            "description": "Installer Shadcn/ui et initialiser les composants de base",
+            "dependencies": [
+              "1.2"
+            ],
+            "details": "Exécuter `npx shadcn-ui@latest init` avec configuration adaptée au projet. Installer les composants essentiels : Button, Card, Input, Avatar. Configurer le fichier components.json et créer l'alias d'import pour les composants UI.",
+            "status": "pending",
+            "testStrategy": "Créer un composant test utilisant Button et Card pour vérifier l'intégration correcte"
+          },
+          {
+            "id": 4,
+            "title": "Création de la structure de dossiers et fichiers de base",
+            "description": "Organiser l'architecture du projet avec dossiers types, lib et components",
+            "dependencies": [
+              "1.3"
+            ],
+            "details": "Créer les dossiers : src/components/ui, src/components/sections, src/lib, src/types, src/hooks, src/data. Ajouter les fichiers : lib/utils.ts (avec clsx/tailwind-merge), types/index.ts, et la configuration des chemins absolus. Créer les fichiers d'index pour les exports.",
+            "status": "pending",
+            "testStrategy": "Vérifier que les imports avec alias @/ fonctionnent correctement dans tous les dossiers"
+          },
+          {
+            "id": 5,
+            "title": "Configuration avancée et dépendances essentielles",
+            "description": "Finaliser next.config.js et installer framer-motion, lucide-react",
+            "dependencies": [
+              "1.4"
+            ],
+            "details": "Configurer next.config.js avec optimisations d'images, compression, et bundler optimizations. Installer framer-motion pour les animations et lucide-react pour les icônes. Ajouter les configurations ESLint et Prettier adaptées au projet. Créer un composant Layout de base.",
+            "status": "pending",
+            "testStrategy": "Lancer le build production avec `npm run build` et vérifier qu'il se termine sans erreur, tester les optimisations d'images avec un exemple"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Mise en place du design system et layout de base",
+        "description": "Définir les couleurs, typographies, espacements et créer les composants UI fondamentaux",
+        "details": "Créer le fichier de configuration Tailwind avec palette de couleurs personnalisée inspirée des références (toukoum.fr, pronexus.in). Définir les tailles de typographie, espacements et breakpoints responsive. Créer les composants de base : Header, Footer, Container, Section. Implémenter le layout principal avec navigation sticky et structure responsive mobile-first. Créer les variables CSS custom pour cohérence visuelle.",
+        "testStrategy": "Valider l'affichage correct sur mobile, tablette et desktop. Tester la navigation sticky, vérifier la cohérence des couleurs et typographies, s'assurer que les composants Shadcn/ui s'intègrent harmonieusement avec le design custom.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configuration Tailwind CSS avec palette de couleurs personnalisée",
+            "description": "Créer et configurer le fichier tailwind.config.js avec une palette de couleurs inspirée des références toukoum.fr et pronexus.in",
+            "dependencies": [],
+            "details": "Analyser les palettes de couleurs des sites de référence. Créer un fichier tailwind.config.js étendu avec colors personnalisées (primary, secondary, accent, neutral). Définir les variantes dark/light. Configurer les tailles de typographie (font-sizes), espacements (spacing) et breakpoints responsive. Ajouter les variables CSS custom dans globals.css pour cohérence avec Shadcn/ui.",
+            "status": "pending",
+            "testStrategy": "Créer une page test avec tous les coloris définis, vérifier la cohérence visuelle avec les références, tester le mode sombre et les breakpoints responsive"
+          },
+          {
+            "id": 2,
+            "title": "Création des composants UI fondamentaux",
+            "description": "Développer les composants de base Container, Section, Header et Footer avec structure responsive",
+            "dependencies": [
+              "2.1"
+            ],
+            "details": "Créer le composant Container avec max-width responsive et padding adaptatif. Développer Section avec variants (hero, content, footer) et gestion des espacements. Créer Header avec navigation responsive et logo. Implémenter Footer avec liens sociaux et mentions légales. Utiliser les tokens Tailwind personnalisés et assurer la compatibilité mobile-first.",
+            "status": "pending",
+            "testStrategy": "Valider l'affichage sur mobile (320px), tablette (768px) et desktop (1200px+). Tester la cohérence des espacements et la lisibilité sur tous les écrans"
+          },
+          {
+            "id": 3,
+            "title": "Implémentation de la navigation sticky et responsive",
+            "description": "Créer un système de navigation collante avec menu mobile hamburger et transitions fluides",
+            "dependencies": [
+              "2.2"
+            ],
+            "details": "Implémenter une navigation sticky avec position fixed et backdrop-blur. Créer un menu hamburger pour mobile avec animation Framer Motion. Ajouter les liens de navigation vers les sections principales. Gérer les états actifs et hover avec transitions CSS. Optimiser pour l'accessibilité (ARIA labels, navigation clavier).",
+            "status": "pending",
+            "testStrategy": "Tester le comportement sticky au scroll, valider le menu mobile sur différents devices, vérifier l'accessibilité avec screen readers et navigation clavier"
+          },
+          {
+            "id": 4,
+            "title": "Définition du système typographique et hiérarchie",
+            "description": "Établir la hiérarchie typographique complète avec scale modulaire et line-heights optimisés",
+            "dependencies": [
+              "2.1"
+            ],
+            "details": "Définir une scale typographique cohérente (H1 à H6, body, small). Configurer les font-weights et line-heights optimaux pour la lisibilité web. Créer les classes utilitaires Tailwind pour chaque niveau. Intégrer les Google Fonts sélectionnées avec optimisations next/font. Définir les styles de texte pour liens, citations et emphases.",
+            "status": "pending",
+            "testStrategy": "Créer une page de style guide avec tous les éléments typographiques, tester la lisibilité sur différentes tailles d'écran, valider les contrastes d'accessibilité"
+          },
+          {
+            "id": 5,
+            "title": "Intégration harmonieuse avec Shadcn/ui et variables globales",
+            "description": "Assurer la cohérence entre le design system custom et les composants Shadcn/ui",
+            "dependencies": [
+              "2.1",
+              "2.2",
+              "2.4"
+            ],
+            "details": "Configurer le fichier components.json de Shadcn/ui avec les couleurs personnalisées. Créer les variables CSS custom dans globals.css pour override des tokens Shadcn. Tester l'intégration avec quelques composants (Button, Card, Input). Ajuster les border-radius, shadows et animations pour correspondre au design. Documenter le style guide dans Storybook ou page dédiée.",
+            "status": "pending",
+            "testStrategy": "Installer et tester plusieurs composants Shadcn/ui (Button, Card, Dialog), vérifier la cohérence visuelle avec le design custom, valider que les overrides CSS fonctionnent correctement"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Développement de la hero section statique",
+        "description": "Créer la structure de base de la hero section avec layout Dev/IA sans interactions",
+        "details": "Implémenter la hero section avec deux colonnes (Dev/IA) inspirée d'adhamdannaway.com. Créer les composants : HeroSection, ProfileCard, SkillsBadge. Intégrer les photos (réelle et version robot à préparer). Ajouter le contenu texte avec présentation Mathieu développeur vs IA. Optimiser pour le responsive avec stack vertical sur mobile. Préparer la structure pour l'animation future (slider).",
+        "testStrategy": "Vérifier l'affichage responsive sur tous les devices, tester le contraste et la lisibilité, valider l'optimisation des images avec next/image, s'assurer que la structure HTML est sémantique et accessible.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Création des composants de base de la hero section",
+            "description": "Développer les composants React fondamentaux pour la hero section : HeroSection (conteneur principal), ProfileCard (carte de profil) et SkillsBadge (badges de compétences)",
+            "dependencies": [],
+            "details": "Créer src/components/HeroSection.tsx comme composant principal avec une structure en deux colonnes. Développer ProfileCard.tsx pour afficher photo et informations de base. Implémenter SkillsBadge.tsx comme composant réutilisable pour les badges de compétences. Utiliser TypeScript avec des interfaces strictes pour les props. Intégrer les composants Shadcn/ui (Card, Badge) comme base.",
+            "status": "pending",
+            "testStrategy": "Créer des tests unitaires pour chaque composant avec des props par défaut, vérifier le rendu correct des éléments DOM et valider les types TypeScript"
+          },
+          {
+            "id": 2,
+            "title": "Intégration et optimisation des images",
+            "description": "Intégrer les photos de Mathieu (réelle et version robot) avec optimisation next/image",
+            "dependencies": [
+              "3.1"
+            ],
+            "details": "Ajouter les images dans public/images/ avec des formats optimisés (WebP/AVIF). Utiliser next/image avec priority pour la hero section, définir les tailles appropriées (responsive). Créer des placeholders avec blur data URLs. Préparer l'image robot de Mathieu (peut être temporairement un placeholder en attendant la création). Optimiser les tailles pour différents breakpoints.",
+            "status": "pending",
+            "testStrategy": "Vérifier le chargement des images sur différentes tailles d'écran, tester les performances avec Lighthouse, valider que les images s'affichent correctement avec et sans JavaScript"
+          },
+          {
+            "id": 3,
+            "title": "Implémentation du contenu textuel et des données",
+            "description": "Ajouter le contenu texte complet avec présentation Mathieu développeur vs IA, créer la structure de données pour les compétences",
+            "dependencies": [
+              "3.1"
+            ],
+            "details": "Créer src/data/heroContent.ts avec les textes pour les deux modes (Dev/IA). Définir les compétences techniques de Mathieu avec catégories (Frontend, Backend, DevOps). Ajouter les descriptions contrastées : Mathieu développeur (expérience, projets) vs IA assistant (capabilities, innovation). Structurer les données pour faciliter l'animation future. Utiliser des types TypeScript pour la cohérence.",
+            "status": "pending",
+            "testStrategy": "Valider que tous les textes s'affichent correctement, vérifier l'absence de fautes d'orthographe, tester la lisibilité sur différents écrans"
+          },
+          {
+            "id": 4,
+            "title": "Développement du layout responsive",
+            "description": "Implémenter le layout responsive avec colonnes desktop et stack vertical mobile",
+            "dependencies": [
+              "3.1",
+              "3.2",
+              "3.3"
+            ],
+            "details": "Utiliser CSS Grid ou Flexbox pour le layout deux colonnes sur desktop. Implémenter la stack verticale sur mobile avec Tailwind breakpoints. Optimiser l'espacement et la hiérarchie visuelle pour mobile. Gérer les transitions entre breakpoints de manière fluide. S'assurer que l'ordre d'affichage mobile suit la logique UX (photo en premier, puis contenu).",
+            "status": "pending",
+            "testStrategy": "Tester sur tous les breakpoints standard (mobile, tablet, desktop), valider avec les outils de responsive design, vérifier l'accessibilité des contrastes et de la navigation au clavier"
+          },
+          {
+            "id": 5,
+            "title": "Préparation de la structure pour l'animation future",
+            "description": "Structurer le code pour faciliter l'implémentation future du slider interactif Dev ↔ IA",
+            "dependencies": [
+              "3.4"
+            ],
+            "details": "Créer une architecture avec état géré pour basculer entre modes Dev/IA. Définir les interfaces TypeScript pour les données d'animation. Structurer les composants pour accepter des props de mode (currentMode: 'dev' | 'ai'). Préparer les data attributes et classes CSS pour Framer Motion. Organiser le code pour minimiser les refactorings lors de l'ajout des animations.",
+            "status": "pending",
+            "testStrategy": "Vérifier que la structure supporte le changement de mode par props, valider la cohérence des interfaces TypeScript, s'assurer que le rendu statique fonctionne parfaitement avant l'ajout des animations"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Création des sections contenu principales",
+        "description": "Développer les sections À propos, Expériences, Compétences avec contenu statique",
+        "details": "Créer les composants : AboutSection (parcours, passion dev + pédagogie), ExperienceSection (TechPath, Matha.io, formations), SkillsSection (tech stack avec focus Dev + IA). Implémenter les modèles de données TypeScript correspondants aux types Profile définis. Créer des cartes visuelles pour chaque expérience/compétence. Ajouter les animations d'apparition au scroll avec Framer Motion (fade-in, slide-up). Optimiser le contenu pour la conversion client.",
+        "testStrategy": "Tester la lisibilité et hiérarchie du contenu, valider les animations de scroll, vérifier la performance des animations sur mobile, s'assurer que le contenu est convaincant pour les personas cibles (clients TechPath, recruteurs).",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implémentation de la navigation et des interactions",
+        "description": "Créer le menu de navigation avec scroll fluide et indicateurs de section active",
+        "details": "Développer le composant Navigation avec menu responsive (hamburger sur mobile). Implémenter le smooth scroll entre sections avec intersection observer pour détecter la section active. Ajouter les indicateurs visuels de progression. Créer un bouton scroll-to-top. Gérer les états hover/focus pour l'accessibilité. Optimiser les performances avec useMemo et useCallback pour éviter les re-renders inutiles.",
+        "testStrategy": "Tester la navigation sur tous les devices, valider le smooth scroll et les indicateurs actifs, vérifier l'accessibilité clavier, s'assurer que les animations ne causent pas de motion sickness (respect prefers-reduced-motion).",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Développement du formulaire de contact",
+        "description": "Créer un formulaire de contact fonctionnel avec validation et envoi d'emails",
+        "details": "Implémenter le composant ContactForm avec React Hook Form et Zod pour la validation. Champs : nom, email, entreprise, budget estimé, message. Intégrer EmailJS ou une API email simple pour l'envoi. Ajouter les états de chargement, succès et erreur avec feedback visuel. Implémenter une protection anti-spam basique (honeypot). Style avec les composants Shadcn/ui (Input, Textarea, Button, Alert).",
+        "testStrategy": "Tester la validation côté client, vérifier l'envoi d'emails en conditions réelles, valider l'accessibilité du formulaire, tester la protection anti-spam, s'assurer que les messages d'erreur sont clairs et utiles.",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Animation interactive de la hero section",
+        "description": "Implémenter le slider interactif Dev ↔ IA avec animations fluides",
+        "details": "Créer le composant HeroSlider avec état géré (Dev/IA). Implémenter les animations de transition avec Framer Motion : morphing des images, changement de texte, transformation des badges de compétences. Ajouter les contrôles utilisateur (boutons, swipe sur mobile). Optimiser les performances avec lazy loading et useCallback. Gérer les états intermédiaires d'animation pour éviter les conflits. Ajouter un auto-play optionnel avec pause au hover.",
+        "testStrategy": "Tester les animations sur devices low-end, valider la fluidité à 60fps, vérifier les interactions tactiles sur mobile, s'assurer que les animations respectent prefers-reduced-motion, tester l'auto-play et les contrôles utilisateur.",
+        "priority": "high",
+        "dependencies": [
+          3,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Infrastructure et données pour le chatbot IA",
+        "description": "Structurer les données de Mathieu et créer l'interface de base du chatbot",
+        "details": "Créer le modèle de données ChatbotKnowledge avec Q&A pairs, personnalité, informations business et anecdotes personnelles. Structurer les données Mathieu : expériences détaillées, méthodologies, tarifs TechPath, opinions tech, anecdotes perso. Développer le composant ChatInterface avec historique de conversation, zone de saisie, indicateurs de frappe. Préparer l'architecture pour l'intégration API (Claude/OpenAI). Implémenter le stockage local des conversations.",
+        "testStrategy": "Valider la structure des données avec des exemples réels, tester l'interface chat sur mobile et desktop, vérifier la performance avec de longues conversations, s'assurer que les données sensibles ne sont pas exposées côté client.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Intégration API IA et logique conversationnelle",
+        "description": "Connecter le chatbot à l'API IA externe et implémenter la logique de conversation",
+        "details": "Choisir et configurer l'API IA (Claude Anthropic recommandé). Créer les API routes Next.js pour proxy sécurisé (/api/chat). Implémenter la logique de prompt engineering avec les données Mathieu structurées. Gérer les contextes de conversation et la mémoire des échanges. Ajouter la gestion d'erreurs robuste et les fallbacks. Implémenter un système de modération de base pour éviter les questions inappropriées.",
+        "testStrategy": "Tester les réponses du chatbot avec des questions types clients, valider la cohérence de la personnalité Mathieu, vérifier la sécurité API et les rate limits, tester les cas d'erreur réseau et les timeouts.",
+        "priority": "high",
+        "dependencies": [
+          8
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configuration et connexion API IA externe",
+            "description": "Sélectionner, configurer et tester la connexion à l'API Claude Anthropic pour le chatbot",
+            "dependencies": [],
+            "details": "Créer un compte Anthropic, obtenir les clés API et les stocker dans les variables d'environnement (.env.local). Installer le SDK Anthropic et créer un service client IA dans lib/ai-client.ts. Configurer les paramètres de base : modèle, température, max_tokens. Créer une fonction de test pour valider la connexion et les réponses basiques.",
+            "status": "pending",
+            "testStrategy": "Tester la connexion API avec une requête simple, valider la gestion des erreurs de réseau et d'authentification, vérifier que les clés API sont correctement chargées depuis l'environnement"
+          },
+          {
+            "id": 2,
+            "title": "Création des API routes Next.js sécurisées",
+            "description": "Développer l'endpoint /api/chat avec proxy sécurisé et gestion des rate limits",
+            "dependencies": [
+              "9.1"
+            ],
+            "details": "Créer app/api/chat/route.ts avec méthode POST pour recevoir les messages utilisateur. Implémenter la validation des données d'entrée avec Zod. Ajouter un système de rate limiting basique avec Map/cache temporaire. Configurer les headers CORS appropriés. Masquer les clés API côté serveur et proxy les requêtes vers Claude. Implémenter la gestion d'erreurs avec codes HTTP appropriés.",
+            "status": "pending",
+            "testStrategy": "Tester l'endpoint avec différents payloads, valider le rate limiting, vérifier que les clés API ne sont pas exposées côté client, tester les cas d'erreur et timeouts"
+          },
+          {
+            "id": 3,
+            "title": "Implémentation du prompt engineering et personnalité Mathieu",
+            "description": "Créer le système de prompts structurés intégrant les données personnelles et professionnelles de Mathieu",
+            "dependencies": [
+              "9.2"
+            ],
+            "details": "Créer un fichier lib/prompts.ts avec le prompt système définissant la personnalité de Mathieu (parcours TechPath, expertise dev + IA, pédagogie). Structurer les données personnelles et professionnelles en JSON (expériences, compétences, projets). Implémenter un système de templates de prompts selon le contexte (questions techniques, commercial, personnel). Créer des exemples de conversations types pour l'entraînement du comportement.",
+            "status": "pending",
+            "testStrategy": "Tester les réponses avec des questions types clients, valider la cohérence de la personnalité, vérifier que les informations techniques sont précises, s'assurer que le ton reste professionnel mais accessible"
+          },
+          {
+            "id": 4,
+            "title": "Gestion du contexte conversationnel et mémoire",
+            "description": "Implémenter le système de maintien du contexte et de la mémoire des échanges précédents",
+            "dependencies": [
+              "9.3"
+            ],
+            "details": "Créer un système de gestion de session côté client avec sessionStorage pour maintenir l'historique des messages. Implémenter une logique de truncation intelligente du contexte pour respecter les limites de tokens. Créer des hooks React (useConversation) pour gérer l'état des messages. Implémenter la persistance optionnelle des conversations importantes. Gérer la continuité contextuelle pour des conversations cohérentes.",
+            "status": "pending",
+            "testStrategy": "Tester la cohérence sur plusieurs échanges, valider la gestion de la limite de tokens, vérifier que le contexte se maintient lors du rechargement de page, tester les conversations longues"
+          },
+          {
+            "id": 5,
+            "title": "Système de gestion d'erreurs et modération",
+            "description": "Implémenter la gestion robuste des erreurs, fallbacks et modération de contenu de base",
+            "dependencies": [
+              "9.4"
+            ],
+            "details": "Créer un système de fallback avec messages prédéfinis en cas d'erreur API. Implémenter une liste de mots-clés inappropriés pour filtrage basique. Créer des messages d'erreur user-friendly pour différents cas (quota dépassé, service indisponible, etc.). Ajouter un système de retry automatique avec backoff exponentiel. Implémenter des logs côté serveur pour monitoring. Créer un indicateur de statut du service pour l'utilisateur.",
+            "status": "pending",
+            "testStrategy": "Tester les cas d'erreur réseau et API, valider le filtrage de contenu inapproprié, vérifier les messages d'erreur user-friendly, tester la récupération automatique après panne temporaire"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Optimisations performances et déploiement",
+        "description": "Optimiser les performances, SEO et déployer sur Vercel avec monitoring",
+        "details": "Optimiser les images avec next/image et formats modernes (WebP/AVIF). Implémenter le code splitting et lazy loading des composants lourds. Configurer les meta tags SEO, Open Graph et JSON-LD. Optimiser les Core Web Vitals pour score Lighthouse > 90. Configurer le déploiement Vercel avec variables d'environnement. Ajouter Google Analytics 4 et monitoring basique. Implémenter la compression gzip/brotli.",
+        "testStrategy": "Auditer avec Lighthouse sur mobile et desktop, tester les performances sur connexions lentes, valider le SEO avec les outils Google, vérifier le déploiement en production, tester l'analytics et le monitoring en conditions réelles.",
+        "priority": "medium",
+        "dependencies": [
+          7,
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-02T21:25:36.452Z",
+      "updated": "2025-08-02T21:25:36.452Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
