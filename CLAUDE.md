@@ -107,6 +107,8 @@ Si l'utilisateur dit ces mots → utiliser cet agent :
 - Modifier du code sans tests avec `test-writer-fixer`
 - Choisir une techno sans `tool-evaluator` ou `backend-architect`
 - Créer une interface sans `ui-designer` ou `frontend-developer`
+- **CRÉER DE NOUVEAUX FICHIERS** quand on peut MODIFIER/REMPLACER l'existant
+- Laisser du code inutilisé dans le projet
 
 ## Phase actuelle
 Utiliser le `taskmaster-orchestrator` pour évaluer où nous en sommes dans le roadmap défini dans le PRD et planifier les prochaines étapes.
